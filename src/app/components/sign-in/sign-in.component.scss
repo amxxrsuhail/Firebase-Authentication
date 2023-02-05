@@ -1,0 +1,31 @@
+.password-container {
+    position: relative;
+    .form-control[type="password"] {
+      padding-right: 40px;
+    }
+    .eyeButton {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+.forgotPassword {
+    text-align: center;
+    margin: -12px 0 15px 0;
+    float: left;
+    width: 100%;
+}
+
+.forgotPassword span {
+    color: #4dd5fe;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    padding-top: 20px;
+} 

@@ -1,0 +1,15 @@
+.password-container {
+    position: relative;
+    .form-control[type="password"] {
+      padding-right: 40px;
+    }
+    .eyeButton {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }

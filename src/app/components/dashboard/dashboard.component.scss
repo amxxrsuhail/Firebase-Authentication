@@ -1,0 +1,26 @@
+// Variables
+$primary-color: #bd0542;
+$secondary-color:#413f3f;
+
+.dashboardHeading{
+    color: $secondary-color;
+}
+
+.sidebar {
+    font-size: x-large;
+    text-align: left;
+    color: $secondary-color;
+}
+
+.sidebar a:hover
+ {
+    color: $primary-color;
+}
+
+.bg-dark {
+    background-color: $primary-color !important;
+}
+
+[role="main"] {
+    padding-top: 55px;
+}
