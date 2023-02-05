@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
 
 // Firebase services + environment module
 import { AngularFireModule } from '@angular/fire/compat';
@@ -9,9 +10,11 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 
+//Routing
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
+//Service
+import { AuthService } from "./shared/services/auth.service";
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +28,7 @@ import { AppComponent } from './app.component';
     AngularFireStorageModule,
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

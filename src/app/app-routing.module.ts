@@ -9,10 +9,10 @@ const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
