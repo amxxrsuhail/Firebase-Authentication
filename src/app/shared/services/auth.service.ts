@@ -49,14 +49,24 @@ export class AuthService {
   }
   // Sign up with email/password
   SignUp(email: string, password: string) {
-    return this.afAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.SetUserData(result.user);
-      })
-      .catch((error) => {
-        window.alert(error.message);
-      });
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&_])[a-zA-Z0-9!@#$%&_]{5,10}$/
+    if (!regex.test(password)) {
+      window.alert("Invalid password. Your password must contain at least 6 to 9 characters including\
+ at least one lowercase, one uppercase, one number, and one of the\
+ following special characters (!@#$%&_)");
+      return false
+    }
+    else {
+      return this.afAuth
+        .createUserWithEmailAndPassword(email, password)
+        .then((result) => {
+          this.SetUserData(result.user);
+          this.SignIn(email, password);
+        })
+        .catch((error) => {
+          window.alert(error.message);
+        });
+    }
   }
  
   // Reset Forgot password
