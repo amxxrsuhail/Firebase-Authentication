@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthredirectGuard } from './authredirect.guard';
+import { AuthRedirect } from './authredirect.guard';
 
 describe('AuthredirectGuard', () => {
-  let guard: AuthredirectGuard;
+  let guard: AuthRedirect;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(AuthredirectGuard);
+    guard = TestBed.inject(AuthRedirect);
   });
 
   it('should be created', () => {

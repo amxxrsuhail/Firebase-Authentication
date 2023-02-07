@@ -68,7 +68,7 @@ export class AuthService {
         });
     }
   }
- 
+
   // Reset Forgot password
   ForgotPassword(passwordResetEmail: string) {
     return this.afAuth
@@ -85,7 +85,7 @@ export class AuthService {
     const user = JSON.parse(localStorage.getItem('user')!);
     return user !== null ? true : false;
   }
-  
+
   /* Setting up user data when sign in with username/password, 
   sign up with username/password and sign in with social auth  
   provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */

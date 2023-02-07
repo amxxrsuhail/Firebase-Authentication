@@ -10,12 +10,12 @@ export class SignInComponent implements OnInit {
     public authService: AuthService
   ) { }
   ngOnInit() { }
-    hide = true;
-    password: string='';
-    showPassword = false;
+  hide = true;
+  password: string = '';
+  showPassword = false;
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
-}
-  
+  }
+
 } 

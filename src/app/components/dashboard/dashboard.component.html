@@ -3,7 +3,10 @@
     <ul class="flex flex-col">
       <!-- Calling SignOut() Api from AuthService -->
       <li class="mt-4 d-flex align-items-center">
-        <a class="ml-6 text-indigo-600 hover:text-indigo-800 font-bold text-lg align-middle" (click)="authService.SignOut()">
+        <a
+          class="ml-6 text-indigo-600 hover:text-indigo-800 font-bold text-lg align-middle"
+          (click)="authService.SignOut()"
+        >
           <i class="fas fa-2x fa-sign-out-alt mr-1 align-middle"></i> Log out
         </a>
       </li>

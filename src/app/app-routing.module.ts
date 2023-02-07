@@ -11,9 +11,9 @@ import { AuthRedirect } from './shared/guard/authredirect.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent, canActivate:[AuthRedirect] },
+  { path: 'sign-in', component: SignInComponent, canActivate: [AuthRedirect] },
   { path: 'register-user', component: SignUpComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate : [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent }
 ];
 @NgModule({

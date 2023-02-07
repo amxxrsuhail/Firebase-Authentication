@@ -11,10 +11,10 @@ export class SignUpComponent implements OnInit {
   ) { }
   ngOnInit() { }
   hide = true;
-    password: string='';
-    showPassword = false;
+  password: string = '';
+  showPassword = false;
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
-}
+  }
 } 
