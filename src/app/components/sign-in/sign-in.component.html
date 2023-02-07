@@ -1,25 +1,49 @@
-<div class="displayTable">
-  <div class="displayTableCell">
-    <div class="authBlock">
-      <h3>Sign In</h3>
-      <div class="formGroup">
-        <input type="text" class="formControl" placeholder="Username" #userName required>
+<div class="flex h-screen items-center justify-center bg-gray-200">
+  <div class="w-full max-w-md bg-white rounded-lg p-6 shadow-md ">
+    <h3 class="text-lg font-medium mb-4 text-center">Sign In</h3>
+    <form>
+      <div class="mb-4">
+        <input
+          type="text"
+          class="w-full p-2 mb-0 bg-gray-200 rounded-lg border-2 focus:border-indigo-500 focus:outline-none focus:shadow-outline"
+          placeholder="Username"
+          #userName
+          required
+        />
       </div>
-      <div class="formGroup password-container">
-        <input type="password" class="formControl" placeholder="Password" #userPassword required [(ngModel)]="password" [type]="showPassword ? 'text' : 'password' ">
-        <button class="eyeButton"   (click)="togglePasswordVisibility()">
-        <i class="fa fa-eye-slash fa-lg eyeIcon" (click)="hide = !hide" [ngClass]="{'fa-eye': hide, 'fa-eye-slash': !hide}"></i></button>
+      <div class="mb-4 relative">
+        <input
+          type="password"
+          class="w-full p-2 mb-0 bg-gray-200 rounded-lg border-2 focus:border-indigo-500 focus:outline-none focus:shadow-outline"
+          placeholder="Password"
+          #userPassword
+          required
+          [(ngModel)]="password"
+          [type]="showPassword ? 'text' : 'password'"
+        />
+        <button class="absolute right-0 top-0 m-3" (click)="togglePasswordVisibility()">
+          <i
+            class="fas fa-eye-slash fa-lg text-gray-600 hover:text-gray-800"
+            (click)="hide = !hide"
+            [ngClass]="{ 'fa-eye': hide, 'fa-eye-slash': !hide }"
+          ></i>
+        </button>
       </div>
       <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+      <div>
+        <input
+          type="button"
+          class="btn btnPrimary mb-4 w-full py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600"
+          value="Log in"
+          (click)="authService.SignIn(userName.value, userPassword.value)"
+        />
       </div>
-      <div class="forgotPassword">
+      <div class="font-bold text-sm mt-2 text-center redirect text-indigo-500 hover:underline cursor-pointer">
         <span routerLink="/forgot-password">Forgot Password?</span>
       </div>
-    </div>
-    <div class="redirectToLogin">
-      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+    </form>
+    <div class="text-sm mt-4 text-center">
+      <span>Don't have an account? <span class="redirect text-indigo-500 hover:underline cursor-pointer" routerLink="/register-user">Sign Up</span></span>
     </div>
   </div>
 </div>
